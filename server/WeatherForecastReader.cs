@@ -16,7 +16,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using static server.StaticData.SD;
 
-namespace ServerSide {
+namespace server {
     internal class WeatherForecastReader {
         private ApplicationDbContext _context;
         private NamedPipeServerStream _pipe;

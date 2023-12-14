@@ -1,5 +1,4 @@
-using server;
-using server.Models;
+using client.Models;
 using System.Diagnostics.CodeAnalysis;
 using System.IO.Pipes;
 using System.Text.Json;

@@ -7,7 +7,7 @@ using System.IO.Pipes;
 using System.Net.NetworkInformation;
 using System.Text.Json;
 
-namespace ServerSide {
+namespace server {
     public class Server {
         private static ApplicationDbContext _context = new ApplicationDbContext();
         private static WeatherForecastReader _weatherForecastReader;
@@ -17,7 +17,7 @@ namespace ServerSide {
                 _weatherForecastWriter = new WeatherForecastWriter();
                 _weatherForecastReader = new WeatherForecastReader();
                 while (true) {
-                    //await _weatherForecastWriter.Run();
+                    await _weatherForecastWriter.Run();
                     _weatherForecastReader.Run();
                     await Task.Delay(1000);
                 }
